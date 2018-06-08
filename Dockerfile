@@ -15,7 +15,7 @@ RUN ./gradlew jar --no-daemon
 FROM flink:alpine
 
 ENV JOB_MANAGER_HOST=flink-jobmanager
-ENV JOB_MANAGER_PORT=6123
+ENV JOB_MANAGER_PORT=8081
 
 COPY --from=builder /example-app/build/libs/example-app-1.0-SNAPSHOT.jar app.jar
 
